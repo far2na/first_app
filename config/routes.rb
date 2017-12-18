@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'courses/index'
+
   get 'greeter/hello', to: 'greeter#hello'
   get 'greeter/goodbye', to: 'greeter#goodbye'
 
