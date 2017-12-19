@@ -1,16 +1,15 @@
-<h1>Searching for - <%= @search_term %></h1>
-
+<h1>Searching for <%= @search_term %> album</h1>
 <table border="1">
   <tr>
-    <th>Image</th>
-    <th>Name</th>
-    <th>Description</th>
+    <th>Thumbnail</th>
+    <th>Title</th>
+    <th>Url</th>
   </tr>
   <% @courses.each do |course| %>
-    <tr class=<%= cycle('even', 'odd') %>>
-      <td><%= image_tag(course["smallIcon"])%></td>
-      <td><%= course["name"] %></td>
-      <td><%= course["shortDescription"] %></td>
+    <tr>
+      <td><%= image_tag(course["thumbnailUrl"])%></td>
+      <td><%= course["title"] %></td>
+      <td><%= course["url"] %></td>
     </tr>
   <% end %>
 </table>
